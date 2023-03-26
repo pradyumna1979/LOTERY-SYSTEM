@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.pradyumna</groupId>
-	<artifactId>cloud-gateway</artifactId>
+	<artifactId>CLOUD-GATEWAY</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>cloud-gateway</name>
 	<description>cloud-gateway</description>
