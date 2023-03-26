@@ -14,6 +14,8 @@
         <module>CALCULATION-SERVICE</module>
         <module>WINNER-SERVICE</module>
         <module>cloud-gateway</module>
+        <module>ACCOUNT-DEBIT</module>
+        <module>ACCOUNT-CREDIT</module>
     </modules>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
