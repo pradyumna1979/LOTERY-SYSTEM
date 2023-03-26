@@ -13,7 +13,7 @@
         <module>SERVICE-REGISTRY</module>
         <module>CALCULATION-SERVICE</module>
         <module>WINNER-SERVICE</module>
-        <module>cloud-gateway</module>
+        <module>CLOUD-GATEWAY</module>
         <module>ACCOUNT-DEBIT</module>
         <module>ACCOUNT-CREDIT</module>
     </modules>
