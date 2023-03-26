@@ -10,6 +10,11 @@ spring:
           uri: lb://WINNER-SERVICE
           predicates:
             - Path=/winner/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: WINNER-SERVICE
+                fallbackUri: forward:/WINNER-fallback
         - id: DEBIT-SERVICE
           uri: lb://DEBIT-SERVICE
           predicates:
@@ -18,4 +23,30 @@ spring:
           uri: lb://CREDIT-SERVICE
           predicates:
             - Path=/credit/**
+resilience4j:
+  circuitbreaker:
+    instances:
+      WINNER-SERVICE:
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 10
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        slidingWindowType: COUNT_BASED
+  retry:
+    instances:
+      WINNER-SERVICE:
+        registerHealthIndicator: true
+        maxRetryAttempts: 5
+        waitDuration: 10s
+  ratelimiter:
+    instances:
+      WINNER-SERVICE:
+        registerHealthIndicator: false
+        limitForPeriod: 10
+        limitRefreshPeriod: 10s
+        timeoutDuration: 3s
 
