@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: USER-SERVICE
+          uri: lb://CALCULATION-SERVICE
+          predicates:
+            - Path=/lotery/**
+        - id: DEPARTMENT-SERVICE
+          uri: lb://WINNER-SERVICE
+          predicates:
+            - Path=/winner/**
+
