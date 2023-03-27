@@ -16,6 +16,7 @@
         <module>CLOUD-GATEWAY</module>
         <module>ACCOUNT-DEBIT</module>
         <module>ACCOUNT-CREDIT</module>
+        <module>CONFIG-SERVER</module>
     </modules>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

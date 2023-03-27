@@ -1,5 +1,8 @@
 spring:
   cloud:
+    config:
+      enable: true
+      uri: http://localhost:9095
     gateway:
       routes:
         - id: CALCULATION-SERVICE
@@ -60,4 +63,5 @@ management:
   endpoint:
     health:
       show-details: always
+
 
