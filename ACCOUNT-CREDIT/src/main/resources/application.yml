@@ -3,16 +3,3 @@ server:
 spring:
   application:
     name: CREDIT-SERVICE
-  datasource:
-    url: jdbc:mysql://127.0.0.1:3306/user_registration
-    username: root
-    password: Root
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa :
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/

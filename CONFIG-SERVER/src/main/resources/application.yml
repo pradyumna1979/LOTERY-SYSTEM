@@ -1,0 +1,12 @@
+server:
+  port: 9095
+spring:
+  application:
+    name: CONFIG-SERVER
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/pradyumna1979/CONFIG-SERVER
+          clone-on-start: true
+

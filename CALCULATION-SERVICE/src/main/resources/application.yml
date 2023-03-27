@@ -3,10 +3,6 @@ server:
 spring:
   application:
     name: CALCULATION-SERVICE
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
 winnerService:
   url: http://WINNER-SERVICE/winner/
 lotery:
